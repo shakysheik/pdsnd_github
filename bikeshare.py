@@ -108,11 +108,6 @@ def time_stats(df):
     # extract hour from the Start Time
     df['Start Hour'] = df['Start Time'].dt.hour
     print("The most common hour is {} with {} trips".format(df['Start Hour'].value_counts().idxmax(), df['Start Hour'].value_counts().max()))
-    
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -130,11 +125,6 @@ def station_stats(df):
     max_start_end = df.groupby(['Start Station', 'End Station'], as_index = 'false')['Start Station'].count().idxmax()
     max_start_end_count = df.groupby(['Start Station', 'End Station'], as_index = 'false')['Start Station'].count().max()
     print("The most popular Start & End Station combination was {} with {} trips".format(max_start_end, max_start_end_count))
-    
-    
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -148,11 +138,6 @@ def trip_duration_stats(df):
     # display mean travel time
     print("The mean travel time was {} seconds".format(df['Trip Duration'].mean()))
     
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
-
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -178,9 +163,6 @@ def user_stats(df):
     except:
         print("There is no Birth Year to report for this city.\n")
         
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
 def view_data(city):
     """Displays 5 data rows from the selected city file each time."""
     
