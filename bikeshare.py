@@ -166,10 +166,15 @@ def user_stats(df):
 def view_data(city):
     """Displays 5 data rows from the selected city file each time."""
     
-    view_data = input("Would you like to view the raw data? Yes or No:\n").lower()
+    view_data = input("Would you like to view the raw data in sets of 10 rows? Yes or No:\n").lower()
         
     with open(CITY_DATA[city.lower()], 'r') as f:
         while view_data == 'yes':
+            print(f.readline())
+            print(f.readline())
+            print(f.readline())
+            print(f.readline())
+            print(f.readline())
             print(f.readline())
             print(f.readline())
             print(f.readline())
