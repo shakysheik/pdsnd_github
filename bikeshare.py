@@ -26,12 +26,12 @@ def get_filters():
             print("{} is not a valid city.\n".format(city.title()))
     
     # get user input for month (all, january, february, ... , june)
-    month = input("Would you like to filter by month: January, February, March, April, May, June? Enter 'All' to view all months\n").lower()
+    month = input("Which month would you like to filter by: January, February, March, April, May, June? Enter 'All' to view all months\n").lower()
     valid_months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
     # check if input is valid
     while month not in valid_months:
         print("{} is not a valid month.\n".format(month.title()))
-        month = input("Would you like to filter by month: January, February, March, April, May, June? Enter 'All' to view all months\n").lower()
+        month = input("Which month would you like to filter by: January, February, March, April, May, June? Enter 'All' to view all months\n").lower()
         
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("Would you like to filter by day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday? Enter 'All' to view all days\n").lower()
