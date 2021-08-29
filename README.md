@@ -4,10 +4,10 @@
 29-Aug-2021
 
 ### Project Title
-Bikeshare
+Udacity Bikeshare Project
 
 ### Description
-An interactive script that displays travel statistics for New York City, Chicago and Washington
+An interactive script built in Python that displays travel statistics for New York City, Chicago and Washington
 
 ### Files used
 bikeshare.py
